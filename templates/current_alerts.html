@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Weather Alerts</title>
+</head>
+<body>
+    <h1>Current Weather Alerts for {{ alert.city }}</h1>
+    <p>Weather Condition: {{ weather['weather'][0]['main'] }}</p>
+    <p>Temperature: {{ weather['main']['temp'] - 273.15 }}°C</p>
+
+    {% if alert_triggered %}
+    <h2>Alert Triggered!</h2>
+    {% else %}
+    <h2>No Alerts</h2>
+    {% endif %}
+</body>
+</html>
